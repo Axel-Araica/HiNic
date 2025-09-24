@@ -68,7 +68,7 @@ create table juegos_didacticos
 id_juego int primary key identity (1,1) not null,
 nombre nvarchar(150) not null,
 descripcion text not null,--instrucciones o tipo de contenido--
---Identificar el enfoque cultural, histÛrico o pedagÛgico del juego.--
+--Identificar el enfoque cultural, hist√≥rico o pedag√≥gico del juego.--
 tema nvarchar(50) not null check (lower(tema) in ('identidad', 'valores', 'soberania','historia')),
 dificultad varchar(50) not null check (lower(dificultad) in ('facil', 'media', 'dificil'))
 );
@@ -100,7 +100,7 @@ create table multimedia_extra
 (
 id_archivo int primary key identity(1,1) not null,
 tipo nvarchar(50) not null  check (lower(tipo) in ('imagen', 'audio', 'video','documento')),
---- Siempre encerr· el URL entre comillas simples '...' al insertarlo--
+--- Siempre encerr√° el URL entre comillas simples '...' al insertarlo--
 url_archivo nvarchar(300),
 id_relato int not null, 
 id_saber int not null
@@ -124,4 +124,8 @@ foreign key (id_categoria) references categorias_culturales(id_categoria);
 
 alter table eventos_culturales
 add id_categoria int not null,
+
 foreign key (id_categoria) references categorias_culturales(id_categoria);
+
+ALTER TABLE multimedia_extra
+ADD FOREIGN KEY (id_relato) REFERENCES relatos(id_relato);
