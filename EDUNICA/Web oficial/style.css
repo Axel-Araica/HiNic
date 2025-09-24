@@ -1,0 +1,12 @@
+body{
+    background-image: url("../imagenes/EduNica.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+.container {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-image: none;
+}
