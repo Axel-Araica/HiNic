@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: 220 70% 50%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 210 40% 95%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 95%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply bg-gradient-to-br from-blue-50 via-white to-yellow-50;
+}
+
+.nicaragua-gradient {
+  background: linear-gradient(135deg, #0066cc 0%, #ffffff 50%, #ffcc00 100%);
+}
+
+.cultural-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 102, 204, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 204, 0, 0.1) 0%, transparent 50%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.story-card {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.story-card:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2);
+}
+
+.cultural-icon {
+  filter: drop-shadow(0 4px 8px rgba(0, 102, 204, 0.3));
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.tradition-border {
+  border-image: linear-gradient(45deg, #0066cc, #ffcc00, #0066cc) 1;
