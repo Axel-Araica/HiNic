@@ -50,6 +50,14 @@ module.exports = {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
+        hinic: {
+          black: 'hsl(var(--hinic-black))',
+          mint: 'hsl(var(--hinic-mint))',
+          teal: 'hsl(var(--hinic-teal))',
+          orange: 'hsl(var(--hinic-orange))',
+          'dark-blue': 'hsl(var(--hinic-dark-blue))',
+          brown: 'hsl(var(--hinic-brown))',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
